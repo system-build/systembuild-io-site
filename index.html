@@ -18,6 +18,10 @@
             padding: 2rem 0;
         }
 
+        #waitlist button[type="submit"] {
+            background-color: #31cc00;
+        }
+
         footer {
             background-color: #eee;
         }
@@ -34,12 +38,17 @@
             Get your products used in construction projects by aligning decision makers, handling objections and ensuring you are the best fit there is.
         </h2>
     </section>
-    <section class="container text-center mx-center py-5 my-5 mx-auto px-5 col-md-6 col-sm-12">
+    <section id="waitlist" class="container text-center mx-center py-5 my-5 mx-auto px-5 col-md-6 col-sm-12">
         <h2>Join the waitlist</h2>
-        <form id="waitlist">
+        <form>
             <input type="email" class="form-control" id="email" name="email" placeholder="mail@example.com" required>
-            <button type="submit" class="btn btn-primary">Join</button>
+            <button type="submit" class="form-control btn my-2">
+                <span style="font-size: 1.2rem;">Join</span>
+                <div class="spinner-border text-primary d-none" role="status">
+                </div>
+            </button>
         </form>
+        <span class="d-none">You have joined the waitlist</span>
     </section>
     <footer class="text-center py-3">
         &copy; 2023 systembuild.io <br/>
@@ -49,8 +58,11 @@
 </body>
 
 <script>
-    document.getElementById("waitlist").addEventListener('submit', (e) => {
+    document.querySelector("#waitlist > form").addEventListener('submit', (e) => {
         e.preventDefault();
+
+        document.querySelector('#waitlist > form > button[type="submit"] > span:first-child').classList.add('d-none');
+        document.querySelector('#waitlist > form > button[type="submit"] > div.spinner-border').classList.remove('d-none');
 
         fetch('https://script.google.com/macros/s/AKfycbwdhuv9kAbujPU_ZfTW8Mhfh5IixFJ6Q_kAJ9-lTODX8Zy45QmxppcNEnJJjFv8e6sFjg/exec', {
             method: 'post',
@@ -59,7 +71,9 @@
             },
             body: new URLSearchParams(new FormData(e.target)).toString(),
         }).then(res => {
-            return res.json()
+            document.querySelector('#waitlist > form').classList.add('d-none');
+            document.querySelector('#waitlist > span').classList.remove('d-none');
+            return res.json();
         }).then(res => {
             console.log(res);
         });

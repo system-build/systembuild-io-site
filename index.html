@@ -7,38 +7,28 @@
     <title>Visual Commerce Platform For Industrialized Construction</title>
     <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css " rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
             color: #333;
             background-color: #fff;
             margin: 0;
             padding: 0;
         }
 
-        header,
-        section,
-        footer {
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #31CC00;
-        }
-
-        h2,
-        h3 {
-            font-size: 20px;
+        header .jumbotron h1.display-1 {
             font-weight: 600;
         }
 
-        h4 {
-            font-size: 18px;
-            font-weight: 400;
+        #waitlist form input {
+            background-color: #eee;
+        }
+
+        #waitlist form textarea {
+            background-color: #eee;
         }
 
         #waitlist button[type="submit"] {
@@ -55,101 +45,157 @@
             background-color: #28a300;
         }
 
-        .container {
-            padding: 2rem 0;
+        #benefits .card-body .card-text {
+            color: #9a9da3;
         }
 
-        footer {
-            background-color: #eee;
+        .container {
+            padding: 2rem 0;
         }
     </style>
 </head>
 
 <body>
-    <header class="text-center m-5">
-        <div><span style="color: #000;">System</span><span style="color: #31cc00;">build</span></div>
-        <h1>The integrated products platform powering the shift to industrialized construction.</h1>
+    <nav class="navbar navbar-expand-lg container">
+        <a class="navbar-brand" href="#">
+            <img src="/images/systembuild-logo-large.png" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">BETA WAITLIST</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="text-center mt-5">
+        <div class="jumbotron">
+            <h1 class="display-1 mb-5">Configurators for <br /> Modular Building Systems</h1>
+            <h2 class="display-6 pt-5">Empower customers to visualize, design and <br /> quote using your building
+                system.</h2>
+        </div>
     </header>
-    <section class="py-5 text-center container">
-        <h2>Let customers instantly configure your product, visualize performance and project impact.</h2>
-    </section>
-    <section id="benefits" class="container">
-        <div class="row">
-            <h3>Key Benefits</h3>
-            <div class="py-4 col-sm-12 col-md-4">
-                <h4 class="p-2">Increased Sales</h4>
-                <span>
-                    Leverage our toolkit to boost your sales by up to 200%.
-                </span>
-            </div>
-            <div class="py-4 col-sm-12 col-md-4">
-                <h4 class="p-2">Empower Distributors</h4>
-                <span>Give your distributors an interactive playground to configure, price, and quote
-                    effectively.</span>
-            </div>
-            <div class="py-4 col-sm-12 col-md-4">
-                <h4 class="p-2">Control Your Data</h4>
-                <span>Manage your products centrally across the AEC ecosystem.</span>
-            </div>
-        </div>
-    </section>
-    <section id="features" class="container">
-        <div class="row">
-            <h3>Features</h3>
-            <div class="py-4 col-sm-12 col-md-4">
-                <h4 class="p-2">Embedded Configurators</h4>
-                <span>Customize your product presentation with our intuitive tools.</span>
-            </div>
-            <div class="py-4 col-sm-12 col-md-4">
-                <h4 class="p-2">AEC Plugins & Marketplace APIs</h4>
-                <span>Seamlessly integrate with industry-standard applications and marketplaces.</span>
-            </div>
-            <div class="py-4 col-sm-12 col-md-4">
-                <h4 class="p-2">Product Catalog Analytics</h4>
-                <span>Gain insights into customer preferences and market trends.</span>
-            </div>
-        </div>
-    </section>
-    <section id="waitlist" class="container text-center mx-center py-5 my-5 mx-auto px-5 col-md-6 col-sm-12">
-        <h2>Get access to our prelaunch Beta</h2>
-        <form>
-            <input type="email" class="form-control" id="email" name="email" placeholder="mail@example.com" required>
-            <button type="submit" class="form-control btn my-2">
-                <span style="font-size: 1.2rem;">Join Beta Waitlist</span>
-                <div class="spinner-border text-primary d-none" role="status">
+    <section id="benefits" class="my-5 py-5">
+        <div class="row text-center">
+            <div class="px-4 my-sm-5 col-sm-12 col-md-4">
+                <div class="card border-0">
+                    <img class="card-img-top" src="/images/mock up - plugins.png" alt="Card image cap">
+                    <div class="card-body w-50 mx-auto">
+                        <h3 class="card-title">AEC Software Plugins</h3>
+                        <p class="card-text">Accelerate design workflows in the AEC software your customers already use.
+                        </p>
+                    </div>
                 </div>
-            </button>
-        </form>
-        <span class="d-none">You have joined the waitlist</span>
+            </div>
+            <div class="px-4 my-sm-5 col-sm-12 col-md-4">
+                <div class="card border-0">
+                    <img class="card-img-top" src="/images/mock up - connection rules.png" alt="Card image cap">
+                    <div class="card-body w-50 mx-auto">
+                        <h3 class="card-title">Web-based Configurators</h3>
+                        <p class="card-text">Customers start using your product directly on your website.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 my-sm-5 col-sm-12 col-md-4">
+                <div class="card border-0">
+                    <img class="card-img-top" src="/images/mock up - files tree.png" alt="Card image cap">
+                    <div class="card-body w-50 mx-auto">
+                        <h3 class="card-title">Back OfficeERP Integrations</h3>
+                        <p class="card-text">Manage and publish your products data and availability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer class="text-center py-3">
-        &copy; 2023 systembuild.io <br />
-        All rights reserved.
+    <section id="waitlist" class="container py-5 my-5">
+        <h2>Drop us a line</h2>
+        <form>
+            <div class="row pt-2">
+                <div class="col-sm-6">
+                    <div class="form-group has-validation">
+                        <label for="firstName">FIRST NAME</label>
+                        <input type="text" class="form-control" name="firstName" id="firstName"
+                            aria-describedby="first name" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group has-validation">
+                        <label for="lastName">LAST NAME</label>
+                        <input type="text" class="form-control" name="lastName" id="lastName"
+                            aria-describedby="last name" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12 pt-2">
+                    <label for="email">EMAIL</label>
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="email" required/>
+                </div>
+                <div class="col-sm-12 pt-2">
+                    <label for="message">MESSAGE (Optional)</label>
+                    <textarea type="text" class="form-control" name="message" id="message" aria-describedby="message"></textarea>
+                </div>
+                <button type="submit" class="form-control btn my-2">
+                    <span style="font-size: 1.8rem; color: #000; font-weight: 800;">Submit</span>
+                    <div class="spinner-border text-primary d-none" role="status">
+                    </div>
+                </button>
+            </div>
+        </form>
+        <span id="reply-message" class="d-none">We got your message and we'll get back to you!</span>
+    </section>
+    <footer class="text-center py-3 border-top">
+        <div class="d-flex container">
+            <div class="flex-start">
+                &copy; <span id="current-year"></span> System Build Inc.
+                <script>
+                    document.getElementById("current-year").innerHTML = new Date().getFullYear();
+                </script>
+            </div>
+        </div>
     </footer>
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js "></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script>
+        document.querySelector("#waitlist > form").addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            document.querySelector('#waitlist > form button[type="submit"] > span:first-child').classList.add('d-none');
+            document.querySelector('#waitlist > form button[type="submit"] > div.spinner-border').classList.remove('d-none');
+
+            fetch('https://script.google.com/macros/s/AKfycbwdhuv9kAbujPU_ZfTW8Mhfh5IixFJ6Q_kAJ9-lTODX8Zy45QmxppcNEnJJjFv8e6sFjg/exec', {
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams(new FormData(e.target)).toString(),
+            }).then(res => {
+                document.querySelector('#waitlist > form').classList.add('d-none');
+                document.querySelector('#waitlist > h2').classList.add('d-none');
+                document.querySelector('#waitlist #reply-message').classList.remove('d-none');
+                return res.json();
+            }).then(res => {
+                console.log(res);
+            });
+        });
+    </script>
 </body>
 
-<script>
-    document.querySelector("#waitlist > form").addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        document.querySelector('#waitlist > form > button[type="submit"] > span:first-child').classList.add('d-none');
-        document.querySelector('#waitlist > form > button[type="submit"] > div.spinner-border').classList.remove('d-none');
-
-        fetch('https://script.google.com/macros/s/AKfycbwdhuv9kAbujPU_ZfTW8Mhfh5IixFJ6Q_kAJ9-lTODX8Zy45QmxppcNEnJJjFv8e6sFjg/exec', {
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: new URLSearchParams(new FormData(e.target)).toString(),
-        }).then(res => {
-            document.querySelector('#waitlist > form').classList.add('d-none');
-            document.querySelector('#waitlist > span').classList.remove('d-none');
-            return res.json();
-        }).then(res => {
-            console.log(res);
-        });
-    });
-</script>
 
 </html>
